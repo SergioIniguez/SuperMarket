@@ -6,10 +6,10 @@ public class Grossary {
 	private int ProductId;
 	private String Name;
 	private String ProductType;
-	private double Quantity;
+	private int Quantity;
 	private double Price;
 	
-	public Grossary(String Name, double Quantity, double Price) {
+	public Grossary(String Name, int Quantity, double Price) {
 		this.ProductId = IdGenerator++;
 		this.Name = Name;
 		this.ProductType = "Grossary";
@@ -41,11 +41,11 @@ public class Grossary {
 		ProductType = productType;
 	}
 
-	public double getQuantity() {
+	public int getQuantity() {
 		return Quantity;
 	}
 
-	public void setQuantity(double quantity) {
+	public void setQuantity(int quantity) {
 		Quantity = quantity;
 	}
 
@@ -56,6 +56,15 @@ public class Grossary {
 	public void setPrice(double price) {
 		Price = price;
 	}
+	
+	@Override
+	public String toString() {
+        return ("ProductId: " + this.getProductId() +
+                    ", Name: " + this.getName() +
+                    ", Product Type: " + this.getProductType() +
+                    ", Quantity : " + this.getQuantity()) +
+        			", Price : $" + this.getPrice();
+   }   
 	
 
 }
