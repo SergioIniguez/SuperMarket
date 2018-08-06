@@ -2,68 +2,67 @@ package com.tcs.ilp;
 
 public class Grossary {
 	
-	private static int IdGenerator = 1;
-	private int ProductId;
-	private String Name;
-	private String ProductType;
-	private int Quantity;
-	private double Price;
+	private static int idGenerator = 1;
+	private int productId;
+	private String name;
+	private String productType;
+	private int quantity;
+	private double price;
 	
-	public Grossary(String Name, int Quantity, double Price) {
-		this.ProductId = IdGenerator++;
-		this.Name = Name;
-		this.ProductType = "Grossary";
-		this.Quantity = Quantity;
-		this.Price = Price;
+	public Grossary(String name, int quantity, double price) {
+		this.productId = idGenerator++;
+		this.name = name;
+		this.quantity = quantity;
+		this.price = price;
 	}
 
 	public int getProductId() {
-		return ProductId;
+		return productId;
 	}
 
 	public void setProductId(int productId) {
-		ProductId = productId;
+		this.productId = productId;
 	}
 
 	public String getName() {
-		return Name;
+		return name;
 	}
 
 	public void setName(String name) {
-		Name = name;
+		this.name = name;
 	}
 
 	public String getProductType() {
-		return ProductType;
+		return productType;
 	}
 
 	public void setProductType(String productType) {
-		ProductType = productType;
+		this.productType = productType;
 	}
 
 	public int getQuantity() {
-		return Quantity;
+		return quantity;
 	}
 
 	public void setQuantity(int quantity) {
-		Quantity = quantity;
+		this.quantity = quantity;
 	}
 
 	public double getPrice() {
-		return Price;
+		return price;
 	}
 
 	public void setPrice(double price) {
-		Price = price;
+		this.price = price;
 	}
 	
 	@Override
 	public String toString() {
-        return ("ProductId: " + this.getProductId() +
-                    ", Name: " + this.getName() +
-                    ", Product Type: " + this.getProductType() +
-                    ", Quantity : " + this.getQuantity()) +
-        			", Price : $" + this.getPrice();
+        return ("ProductId: " + this.productId +
+                    ", Name: " + this.name +
+                    ", Product Type: " + this.getClass().getSimpleName() +
+                    ", Quantity: " + this.quantity +
+        			", Price: $" + this.price);
    }   
 	
 

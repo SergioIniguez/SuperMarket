@@ -85,17 +85,17 @@ public class MarketMain {
 					//Grossary Value
 					System.out.println("****Total values per category****");
 					for(Grossary g : grossaryList) {
-						totalValueGrossary += g.getPrice();
+						totalValueGrossary += (g.getPrice() * g.getQuantity());
 					}
 					System.out.println("Total value from Grossary: $" + totalValueGrossary);
 					//Household Value
 					for(Household h : householdList) {
-						totalValueHousehold += h.getPrice();
+						totalValueHousehold += (h.getPrice() * h.getQuantity());
 					}
 					System.out.println("Total value from Household: $" + totalValueHousehold);
 					//Stationay Value
 					for(Stationay s : stationayList) {
-						totalValueStationay += s.getPrice();
+						totalValueStationay += (s.getPrice() * s.getQuantity());
 					}
 					System.out.println("Total value form Stationay: $" + totalValueStationay);
 					System.out.println("\n");
